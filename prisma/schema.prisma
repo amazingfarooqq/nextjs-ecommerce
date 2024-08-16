@@ -32,6 +32,12 @@ model User {
   spaces   Space[] @relation(fields: [spacesIds], references: [id])
 }
 
+model Product {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  productId String   @db.ObjectId
+
+}
+
 model Account {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   userId             String   @db.ObjectId
